@@ -1,0 +1,99 @@
+$success-border: rgba(101,159,19,.3);
+$success-color: #659f13;
+$success-background: #f2fae3;
+
+$danger-border: rgba(216,80,48,.3);
+$danger-color: #d85030;
+$danger-background: #fff1f0;
+
+.navbar-default {
+    background-color: #fff;
+    border-bottom: 1px solid #e9e9e9;
+    box-shadow: 0 5px 5px -5px rgba(0,0,0,.1);
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #fff;
+    color: $bg-900;
+}
+
+
+.open > .dropdown-menu {
+    background-color: #fcfcfc; /*CLOUD*/
+    /*border-top: 0;*/
+    border-top: 1px solid #e9e9e9;
+    box-shadow: 0 5px 5px -5px rgba(0,0,0,.1);
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: #f4f4f4
+}
+
+table,
+input,
+textarea,
+button,
+select,
+.form-control,
+.nav-tabs,
+.nav-tabs .active,
+.panel,
+.popover,
+.alert,
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
+    box-shadow: 0 5px 5px -5px rgba(0,0,0,.1);
+}
+
+input,
+textarea,
+button,
+select,
+.form-control {
+    min-height: 34px;
+}
+
+.alert{
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.alert-info {
+    color: #2d7091;
+    background-color: #ebf7fd;
+    border: 1px solid rgba(45,112,145,.3);
+}
+
+.alert-success {
+    background: $success-background;
+    color: $success-color;
+    border-color: 1px solid $success-border;
+}
+
+.alert-danger {
+    background: $danger-background;
+    color: $danger-color;
+    border-color: $danger-border;
+}
+
+.alert-warning {
+    background: #fffceb;
+    color: #e28327;
+    border-color: rgba(226,131,39,.3);
+}
+
+.has-success .form-control {
+    border:1px solid $success-border;
+}
+
+.has-error .form-control {
+    border:1px solid $danger-border;
+}
+
+.help-block {
+    color:#777;
+}

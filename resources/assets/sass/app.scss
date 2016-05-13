@@ -1,0 +1,23 @@
+$clouds : #ecf0f1;
+$bg-50 : #ECEFF1;
+$bg-100 : #CFD8DC;
+$bg-200 : #B0BEC5;
+$bg-300 : #90A4AE;
+$bg-400 : #78909C;
+$bg-500 : #263238;
+$bg-600 : #546E7A;
+$bg-700 : #455A64;
+$bg-800 : #37474F;
+$bg-900 : #263238;
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+@import "theme/bootstrap/layout";
+@import "custom/generic";
+@import "custom/offcanvas";
+@import "custom/buttons";
+@import "custom/bootstrap-theme";
+@import "custom/profile";
+@import "custom/sweetalert";
+@import "custom/card";
