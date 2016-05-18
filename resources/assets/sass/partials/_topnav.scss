@@ -1,0 +1,20 @@
+nav {
+    @include row();
+    @include padding(1vh 3em);
+    background-color: white;
+
+    ul.inline {
+        float: right;
+        list-style-type: none;
+    }
+
+    ul.inline li {
+        display: inline;
+        float: left;
+        @include padding(null 10px);
+    }
+
+    ul.inline li img{
+        border-radius: 50%;
+    }
+}

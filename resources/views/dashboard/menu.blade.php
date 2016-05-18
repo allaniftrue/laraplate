@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<!--<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,8 +25,17 @@
               </li>
             </ul>
           </div>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
+</nav> -->
+
+<nav>
+  <div class="container">
+    <ul class="inline right">
+      <li>
+        <a href="#"><img src="@if($user->avatar) {{ asset('uploads/profile').'/'.$user->avatar }} @else {{ asset('uploads/profile/default-avatar.jpg') }} @endif" class="img-circle" width="24" height="24"> {{ $user->fullname or 'Unknown' }}</a>
+      </li>
+      <li><a href="{{ url('logout') }}">Logout</a></li>
+    </ul>
+  </div>
 </nav>
-
-

@@ -10,14 +10,11 @@ $bg-700 : #455A64;
 $bg-800 : #37474F;
 $bg-900 : #263238;
 
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$visual-grid: true !default;
+$max-width: em(1024) !default;
+$grid-columns: 12 !default;
 
-
-@import "theme/bootstrap/layout";
-@import "custom/generic";
-@import "custom/offcanvas";
-@import "custom/buttons";
-@import "custom/bootstrap-theme";
-@import "custom/profile";
-@import "custom/sweetalert";
-@import "custom/card";
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import "node_modules/bourbon-neat/app/assets/stylesheets/neat";
+@import "partials/global";
+@import "partials/topnav";

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>{{ $title or 'Administration Panel' }}</title>
-        <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+        <link href="{{ elixir('css/all.css') }}" rel="stylesheet">
         @yield('styles')
         @yield('jsHeader')
     </head>
