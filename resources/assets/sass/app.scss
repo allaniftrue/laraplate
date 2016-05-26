@@ -1,3 +1,5 @@
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon";
+
 $clouds : #ecf0f1;
 $bg-50 : #ECEFF1;
 $bg-100 : #CFD8DC;
@@ -13,8 +15,17 @@ $bg-900 : #263238;
 $visual-grid: true !default;
 $max-width: em(1024) !default;
 $grid-columns: 12 !default;
+$visual-grid-color: purple;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.04;
 
-@import "node_modules/bourbon/app/assets/stylesheets/bourbon";
 @import "node_modules/bourbon-neat/app/assets/stylesheets/neat";
+
+$large-screen:  new-breakpoint(min-width 1200px 12);
+$medium-screen: new-breakpoint(min-width 992px 12);
+$small-screen: new-breakpoint(min-width 768px 6);
+$xsmall-screen: new-breakpoint(min-width 480px 4);
+$ismall-screen: new-breakpoint(min-width 320px 4);
+
 @import "partials/global";
 @import "partials/topnav";

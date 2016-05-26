@@ -30,12 +30,38 @@
 </nav> -->
 
 <nav>
-  <div class="container">
+  <div class="menu">
     <ul class="inline right">
       <li>
-        <a href="#"><img src="@if($user->avatar) {{ asset('uploads/profile').'/'.$user->avatar }} @else {{ asset('uploads/profile/default-avatar.jpg') }} @endif" class="img-circle" width="24" height="24"> {{ $user->fullname or 'Unknown' }}</a>
+        <img src="@if($user->avatar) {{ asset('uploads/profile').'/'.$user->avatar }} @else {{ asset('uploads/profile/default-avatar.jpg') }} @endif" class="img-circle" id="user-icon" width="24" height="24">
       </li>
-      <li><a href="{{ url('logout') }}">Logout</a></li>
     </ul>
+  </div>
+
+  <div class="dropdown">
+    <span class="top-arrow"><img src="{{ asset('img/top-arrow.png') }}"></span>
+    <ul>
+      <li>
+        <div class="information">
+          <div class="avatar">
+            <img src="@if($user->avatar) {{ asset('uploads/profile').'/'.$user->avatar }} @else {{ asset('uploads/profile/default-avatar.jpg') }} @endif" class="img-circle" id="user-icon" width="64" height="64">
+          </div>
+          <div class="details">
+            <p>
+              <strong>{{ $user->fullname or "Unknown" }} John Snow</strong>
+              <br>
+              <a href="{{ url('dashboard/profile') }}">Profile</a>
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="actions">
+      <ul class="inline">
+        <li>
+          <button>Logout</button>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

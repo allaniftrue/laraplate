@@ -5,19 +5,19 @@ html {
   box-sizing: inherit; }
 
 body:before {
-  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.1721527019%, transparent 6.1721527019%, transparent 8.5298042998%, #eee 8.5298042998%, #eee 14.7019570017%, transparent 14.7019570017%, transparent 17.0596085997%, #eee 17.0596085997%, #eee 23.2317613015%, transparent 23.2317613015%, transparent 25.5894128995%, #eee 25.5894128995%, #eee 31.7615656014%, transparent 31.7615656014%, transparent 34.1192171993%, #eee 34.1192171993%, #eee 40.2913699012%, transparent 40.2913699012%, transparent 42.6490214991%, #eee 42.6490214991%, #eee 48.821174201%, transparent 48.821174201%, transparent 51.178825799%, #eee 51.178825799%, #eee 57.3509785009%, transparent 57.3509785009%, transparent 59.7086300988%, #eee 59.7086300988%, #eee 65.8807828007%, transparent 65.8807828007%, transparent 68.2384343986%, #eee 68.2384343986%, #eee 74.4105871005%, transparent 74.4105871005%, transparent 76.7682386985%, #eee 76.7682386985%, #eee 82.9403914003%, transparent 82.9403914003%, transparent 85.2980429983%, #eee 85.2980429983%, #eee 91.4701957002%, transparent 91.4701957002%, transparent 93.8278472981%, #eee 93.8278472981%, #eee 100%, transparent 100%);
+  background-image: linear-gradient(to left, transparent 0, purple 0, purple 6.1721527019%, transparent 6.1721527019%, transparent 8.5298042998%, purple 8.5298042998%, purple 14.7019570017%, transparent 14.7019570017%, transparent 17.0596085997%, purple 17.0596085997%, purple 23.2317613015%, transparent 23.2317613015%, transparent 25.5894128995%, purple 25.5894128995%, purple 31.7615656014%, transparent 31.7615656014%, transparent 34.1192171993%, purple 34.1192171993%, purple 40.2913699012%, transparent 40.2913699012%, transparent 42.6490214991%, purple 42.6490214991%, purple 48.821174201%, transparent 48.821174201%, transparent 51.178825799%, purple 51.178825799%, purple 57.3509785009%, transparent 57.3509785009%, transparent 59.7086300988%, purple 59.7086300988%, purple 65.8807828007%, transparent 65.8807828007%, transparent 68.2384343986%, purple 68.2384343986%, purple 74.4105871005%, transparent 74.4105871005%, transparent 76.7682386985%, purple 76.7682386985%, purple 82.9403914003%, transparent 82.9403914003%, transparent 85.2980429983%, purple 85.2980429983%, purple 91.4701957002%, transparent 91.4701957002%, transparent 93.8278472981%, purple 93.8278472981%, purple 100%, transparent 100%);
   content: "";
   display: inline-block;
   height: 100%;
   left: 0;
   margin: 0 auto;
-  max-width: em(1024);
-  opacity: 0.4;
+  max-width: 64em;
+  opacity: 0.04;
   pointer-events: none;
   position: fixed;
   right: 0;
   width: 100%;
-  z-index: -1; }
+  z-index: 9999; }
 
 html,
 body {
@@ -26,23 +26,151 @@ body {
 a {
   text-decoration: none; }
 
-nav {
-  display: block;
-  padding: 1vh 3em;
-  background-color: white; }
-  nav::after {
+.container {
+  max-width: 64em;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
     clear: both;
     content: "";
     display: table; }
-  nav ul.inline {
-    float: right;
-    list-style-type: none; }
-  nav ul.inline li {
-    display: inline;
+  .container.content {
+    margin-top: 2.5em;
+    padding: 15px;
+    line-height: 1.375em;
+    background-color: white; }
+
+nav img {
+  border-radius: 50%; }
+
+nav ul.inline {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+nav ul.inline li {
+  display: inline;
+  float: left;
+  padding: 10px; }
+
+nav .menu {
+  width: 100% !important;
+  display: block;
+  background-color: white; }
+  nav .menu::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 320px) {
+    nav .menu {
+      padding: 2vh 0.8em; } }
+  @media screen and (min-width: 480px) {
+    nav .menu {
+      padding: 2vh 3em; } }
+  @media screen and (min-width: 768px) {
+    nav .menu {
+      padding: 2vh 3em; } }
+  @media screen and (min-width: 992px) {
+    nav .menu {
+      padding: 2vh 3em; } }
+  @media screen and (min-width: 1200px) {
+    nav .menu {
+      padding: 2vh 3em; } }
+  nav .menu ul.inline {
+    float: right; }
+  @media screen and (min-width: 320px) {
+    nav .menu ul.inline li img {
+      width: 48px;
+      height: 48px; } }
+  @media screen and (min-width: 480px) {
+    nav .menu ul.inline li img {
+      width: 48px;
+      height: 48px; } }
+  @media screen and (min-width: 992px) {
+    nav .menu ul.inline li img {
+      width: 32px;
+      height: 32px; } }
+
+nav .dropdown {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  margin-top: -10px;
+  line-height: 1.375em;
+  background-color: #fff;
+  border: 1px solid #CFD8DC; }
+  @media screen and (max-width: 320px) {
+    nav .dropdown {
+      margin-top: 0;
+      width: 90%;
+      right: 3px; } }
+  @media screen and (min-width: 320px) {
+    nav .dropdown {
+      width: 90%;
+      right: 5px; } }
+  @media screen and (min-width: 768px) {
+    nav .dropdown {
+      width: 50%;
+      right: 5px; } }
+  @media screen and (min-width: 480px) {
+    nav .dropdown {
+      width: 50%;
+      right: 40px; } }
+  @media screen and (min-width: 992px) {
+    nav .dropdown {
+      width: 20%;
+      right: 35px; } }
+  @media screen and (min-width: 1200px) {
+    nav .dropdown {
+      width: 20%;
+      right: 35px; } }
+  nav .dropdown ul {
+    list-style: none; }
+    nav .dropdown ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+  nav .dropdown .information {
     float: left;
-    padding-right: 10px;
-    padding-left: 10px; }
-  nav ul.inline li img {
-    border-radius: 50%; }
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 100%;
+    line-height: 16px; }
+    nav .dropdown .information::after {
+      clear: both;
+      content: "";
+      display: table; }
+    nav .dropdown .information:last-child {
+      margin-right: 0; }
+    nav .dropdown .information .avatar {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 23.2317613015%; }
+      nav .dropdown .information .avatar:last-child {
+        margin-right: 0; }
+    nav .dropdown .information .details {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 74.4105871005%; }
+      nav .dropdown .information .details:last-child {
+        margin-right: 0; }
+  nav .dropdown .actions {
+    display: block;
+    border-top: 1px solid #CFD8DC;
+    background-color: #ECEFF1; }
+    nav .dropdown .actions::after {
+      clear: both;
+      content: "";
+      display: table; }
+  nav .dropdown .top-arrow {
+    position: absolute;
+    right: 30px;
+    top: -14px; }
+    @media screen and (max-width: 320px) {
+      nav .dropdown .top-arrow {
+        right: 10px; } }
 
 /*# sourceMappingURL=app.css.map */

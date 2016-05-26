@@ -22,6 +22,7 @@ elixir(function(mix) {
 
 elixir(function(mix) {
     mix.scripts([
+        'hammer-time.js',
         'app.js'
     ], 'public/js/app.js');
 });

@@ -6,3 +6,14 @@ body {
 a {
     text-decoration: none;
 }
+
+.container {
+	@include outer-container;
+
+    &.content {
+        margin-top: em(40);
+        @include padding(15px);
+        line-height: em(22);
+        background-color: white;
+    }
+}

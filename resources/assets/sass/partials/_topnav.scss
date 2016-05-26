@@ -1,20 +1,131 @@
 nav {
-    @include row();
-    @include padding(1vh 3em);
-    background-color: white;
+
+    img {
+        border-radius: 50%;
+    }
 
     ul.inline {
-        float: right;
+        clear: both;
+        margin: 0;
+        padding: 0;
         list-style-type: none;
     }
 
     ul.inline li {
         display: inline;
         float: left;
-        @include padding(null 10px);
+        @include padding(10px);
     }
 
-    ul.inline li img{
-        border-radius: 50%;
+    .menu {
+        width: 100% !important;
+        @include row();
+        background-color: white;
+
+        @include media($ismall-screen) {
+            @include padding(2vh 0.8em);
+        }
+        @include media($xsmall-screen) {
+            @include padding(2vh 3em);
+        }
+        @include media($small-screen) {
+            @include padding(2vh 3em);
+        }
+        @include media($medium-screen) {
+            @include padding(2vh 3em);
+        }
+        @include media($large-screen) {
+            @include padding(2vh 3em);
+        }
+
+        ul.inline {
+            float: right;
+        }
+        ul.inline li img {
+            @include media($ismall-screen) {
+                width: 48px;
+                height: 48px;
+            }
+            @include media($xsmall-screen) {
+                width: 48px;
+                height: 48px;
+            }
+            @include media($medium-screen) {
+                width: 32px;
+                height: 32px;
+            }
+        }
     }
+
+    .dropdown {
+        z-index: 1;
+        display: none;
+        position: absolute;
+        margin-top: -10px;
+        line-height: em(22);
+        background-color:#fff;
+        border: 1px solid $bg-100;
+
+        @include media(max-width 320px) {
+            margin-top: 0;
+            width: 90%;
+            right: 3px;
+        }
+        @include media($ismall-screen) {
+            width: 90%;
+            right: 5px;
+        }
+        @include media($small-screen) {
+            width: 50%;
+            right: 5px;
+        }
+        @include media($xsmall-screen) {
+            width: 50%;
+            right: 40px;
+        }
+        @include media($medium-screen) {
+            width: 20%;
+            right: 35px;
+        }
+        @include media($large-screen) {
+            width: 20%;
+            right: 35px;
+        }
+
+        ul {
+            @include clearfix;
+            list-style: none;
+        }
+
+        .information {
+            @include clearfix;
+            @include span-columns(12);
+            line-height: 16px;
+
+            .avatar {
+                @include span-columns(3 of 12);
+            }
+
+            .details {
+                @include span-columns(9 of 12);
+            }
+        }
+
+        .actions {
+            @include row();
+            border-top: 1px solid $bg-100;
+            background-color: $bg-50;
+        }
+
+        .top-arrow {
+            position: absolute;
+            right: 30px;
+            top: -14px;
+
+            @include media(max-width 320px) {
+                right: 10px;
+            }
+        }
+    }
+
 }

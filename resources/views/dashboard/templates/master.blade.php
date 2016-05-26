@@ -11,11 +11,9 @@
     </head>
     <body>
         @include('dashboard.menu')
-        <div class="container">
+        <div class="container content">
             @yield('content')
         </div>
-        <script src="{{ asset('js/jquery.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script type="text/javascript">
         var csrfToken = '{{ csrf_token() }}',
             baseUrl = '{{ url('/') }}/';
